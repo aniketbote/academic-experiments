@@ -1,0 +1,86 @@
+runge kutta order 4
+program:
+
+deff('d=f(x,y)','d=(y-x)/(y+x)')
+y0=1;
+x0=0;
+x=0.2;
+h=0.1;
+it=(x-x0)/h
+disp('x0=')
+disp(x0)
+disp('y0=')
+disp(y0)
+disp('h=')
+disp(h)
+disp('xn=')
+disp(x)
+for i=1:it
+disp(i,'step=')
+k1=h*f(x0,y0)
+k2=h*f(x0+h/2,y0+k1/2)
+k3=h*f(x0+h/2,y0+k2/2)
+k4=h*f(x0+h,y0+k3)
+k=(k1+2*k2+2*k3+k4)/6
+disp('k1=')
+disp(k1)
+disp('k2=')
+disp(k2)
+disp('k3=')
+disp(k3)
+disp('k4=')
+disp(k4)
+disp('k=')
+disp(k)
+x0=x0+h
+y0=y0+k
+disp('at x=')
+disp(x0)
+disp('y=')
+disp(y0)
+i=i+1
+end
+
+
+output:
+
+x0=
+   0.
+ y0=
+   1.
+ h=
+   0.1
+ xn=
+   0.2
+ step=
+   1.
+ k1=
+   0.1
+ k2=
+   0.0909091
+ k3=
+   0.0908714
+ k4=
+   0.0832056
+ k=
+   0.0911277
+ at x=
+   0.1
+ y=
+   1.0911277
+ step=
+   2.
+ k1=
+   0.0832092
+ k2=
+   0.0766124
+ k3=
+   0.0765521
+ k4=
+   0.0707534
+ k=
+   0.0767153
+ at x=
+   0.2
+ y=
+   1.167843

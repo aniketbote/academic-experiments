@@ -1,0 +1,13 @@
+import stack as s
+s.print_stack()
+s.push(5)
+s.push(4)
+s.push(3)
+s.push(2)
+s.push(1)
+s.push(7)
+s.print_stack()
+y=s.peep()
+print(y)
+s.pop()
+s.print_stack()

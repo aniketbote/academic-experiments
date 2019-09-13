@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main()
+{
+    int i,c=0,d=0,j;
+    char a[30],b[30];
+    puts("enter both string");
+    gets(a);
+    gets(b);
+    for(i<0;a[i]!='\0';i++);
+    for(j<0;b[j]!='\0';j++);
+    if(i<j)
+        puts(a);
+    else if(i>j)
+        puts(b);
+    else
+    {
+        for(i=0;i<j;i++)
+        {
+            if((a[i])<(b[i]))
+            {
+                c++;
+                break;
+            }
+            else if((a[i])>(b[i]))
+            {
+                d++;
+                break;
+            }
+        }
+        if(c==1)
+            puts(a);
+        else if(d==1)
+            puts(b);
+        else
+            puts("Both strings are same");
+    }
+return 0;
+}

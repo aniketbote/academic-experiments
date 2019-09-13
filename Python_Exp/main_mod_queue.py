@@ -1,0 +1,10 @@
+import queue1 as q
+q.print_queue()
+q.insert(5)
+q.insert(3)
+q.insert(4)
+q.insert(1)
+q.insert(2)
+q.print_queue()
+q.delete()
+q.print_queue()

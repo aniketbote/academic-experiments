@@ -1,0 +1,9 @@
+import java.io.*
+class hamming
+{
+public static void main( String args[])
+{
+Scanner sc =  new Scanner(System.in)
+}
+}
+

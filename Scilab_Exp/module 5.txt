@@ -1,0 +1,121 @@
+program 1:
+
+#include<stdio.h>
+void main()
+{
+    int i,c=0,d=0,j;
+    char a[30],b[30];
+    puts("enter both string");
+    gets(a);
+    gets(b);
+    for(j=0;b[j]!='\0';j++);
+    for(i=0;a[i]!='\0';i++);
+    if(i>j)
+        j=i;
+           for(i=0;i<j;i++)
+        {
+            if(tolower(a[i])<tolower(b[i]))
+            {
+                c++;
+                break;
+            }
+            else if(tolower(a[i])>tolower(b[i]))
+            {
+                d++;
+                break;
+            }
+        }
+
+        if(c==1)
+        {
+            printf("\nThe first string :\n");
+            puts(a);
+        }
+        else if(d==1)
+        {
+            printf("\nThe first string :\n");
+            puts(b);
+        }
+        else
+            puts("\nBoth strings are same\n");
+}
+
+program 2:
+
+#include<stdio.h>
+void main()
+{
+    char a[50],b[50];
+    int c=0,d=0,e=0,f=0,i;
+    puts("Enter the string");
+    gets(a);
+    for(i=0;a[i]!='\0';i++)
+    {
+        b[i]=tolower(a[i]);
+        if(b[i]=='a' || b[i]=='e' || b[i]=='i' || b[i]=='o' || b[i]=='u')
+            c++;
+        else if(b[i]>='0' && b[i]<='9')
+            d++;
+        else if(b[i]==' ')
+            e++;
+        else
+            f++;
+    }
+    printf("\nVowels : %d\nDigits : %d\nWhite space : %d\nConsonants : %d",c,d,e,f);
+}
+
+program 3:
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char a[30];
+    int i,j,k;
+    puts("Enter the string");
+    gets(a);
+    k=strlen(a);
+    for(i=0,j=k-1;i<=k;i++,j--)
+       {
+        if(a[i]!=a[j])
+            break;
+       }
+        if(i==k)
+            printf("%s is pallindrome string",a);
+        else
+            printf("%s is not pallindrome string",a);
+
+
+}
+
+program 4:
+
+#include<stdio.h>
+#include<string.h>
+void  main()
+{
+    char a[30][30],t[30];
+    int n,i,j;
+    printf("Enter the no of names=");
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
+        gets(a[i]);
+    for(i=0;i<=n;i++)
+    {
+        for(j=i+1;j<=n;j++)
+        {
+            if(strcmp(a[i],a[j])>0)
+            {
+              strcpy(t,a[i]);
+              strcpy(a[i],a[j]);
+              strcpy(a[j],t);
+            }
+        }
+    }
+    printf("\nThe sorted names are : \n");
+    for(i=0;i<=n;i++)
+    {
+        puts(a[i]);
+    }
+}
+

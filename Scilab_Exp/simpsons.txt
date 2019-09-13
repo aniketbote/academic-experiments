@@ -1,0 +1,50 @@
+
+simpson
+program=
+
+deff('d=f(x)','d=1/(1+x^2)')
+x0=-1;
+xn=1;
+n=9
+h=(xn-x0)/n
+s1=0
+s2=0
+x=x0
+disp(x0,'x0=')
+disp(xn,'xn=')
+disp(h,'h=')
+disp(n,'n=')
+for i=1:8
+    if i==3 || i==6 then
+        x=x+h
+        s1=s1+f(x)
+    else
+        x=x+h
+        s2=s2+f(x)
+end
+end
+y=((3*h)/8)*(f(x0)+f(xn)+(3*s2)+(2*s1))
+disp(f(x0)+f(xn),'sum of extremes=')
+disp(s1,'sum of multiples of three T=')
+disp(s2,'sum of remaining R=')
+disp(y,'solution by Simpsons 3/8th rule I=')
+
+output=
+
+
+ x0=
+  -1.
+ xn=
+   1.
+ h=
+   0.2222222
+ n=
+   9.
+ sum of extremes=
+   1.
+ sum of multiples of three T=
+   1.8
+ sum of remaining R=
+   4.7500655
+ solution by Simpsons 3/8th rule I=
+   1.5708497

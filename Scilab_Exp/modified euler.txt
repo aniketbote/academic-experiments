@@ -1,0 +1,73 @@
+eulers modified:
+
+program:
+
+
+deff('d=f(x,y)','d=log(x+y)')
+y0=2;
+x0=0;
+h=0.2;
+x=0.4;
+s=4;
+x1=x0+h
+y1=y0+h*f(x0,y0)
+disp(x0,'x0=')
+disp(y0,'y0=')
+disp(x,'xn=')
+disp(h,'h=')
+disp('step 1')
+disp(x1,'at x1=')
+disp(y1,'y1=')
+for i=1:s
+    y1=y0+(h/2)*(f(x0,y0)+f(x1,y1))
+    disp(y1,'Modified y1=')
+    i=i+1
+end
+disp('step 2')
+x2=x1+h
+y2=y1+h*f(x1,y1)
+disp(x2,'at x2=')
+disp(y2,'y2=')
+for i=1:s
+    y2=y1+(h/2)*(f(x1,y1)+f(x2,y2))
+    disp(y2,'Modified y2=')
+    i=i+1
+end
+
+
+output:
+
+x0=
+   0.
+ y0=
+   2.
+ xn=
+   0.4
+ h=
+   0.2
+ step 1
+ at x1=
+   0.2
+ y1=
+   2.1386294
+ Modified y1=
+   2.1542712
+ Modified y1=
+   2.1549378
+ Modified y1=
+   2.1549662
+ Modified y1=
+   2.1549674
+ step 2
+ at x2=
+   0.4
+ y2=
+   2.3262727
+ Modified y2=
+   2.3409136
+ Modified y2=
+   2.3414492
+ Modified y2=
+   2.3414687
+ Modified y2=
+   2.3414694

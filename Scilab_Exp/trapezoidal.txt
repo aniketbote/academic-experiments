@@ -1,0 +1,39 @@
+trapezoid:
+program:
+
+deff('d=f(x)','d=1+x^3')
+x0=0;
+xn=2;
+n=8
+h=(xn-x0)/n
+s=0
+x=x0
+disp(x0,'x0=')
+disp(xn,'xn=')
+disp(h,'h=')
+disp(n,'n=')
+for i=1:7
+    x=x+h
+    s=s+f(x)
+end
+y=(h/2)*(f(x0)+f(xn)+(2*s))
+disp(f(x0)+f(xn),'sum of extremes X=')
+disp(s,'sum of remaining R=')
+disp(y,'solution by Trapezoidal rule I=')
+
+output:
+
+ x0=
+   0.
+ xn=
+   2.
+ h=
+   0.25
+ n=
+   8.
+ sum of extremes X=
+   10.
+ sum of remaining R=
+   19.25
+ solution by Trapezoidal rule I=
+   6.0625
