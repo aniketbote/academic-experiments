@@ -1,0 +1,185 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 EXP - 2\par
+output:\par
+[training@localhost ~]$ sqoop import \\\par
+> --connect jdbc:mysql://localhost/loudacre \\\par
+> --username training --password training \\\par
+> --fields-terminated-by '\\t' \\\par
+> --table device \\\par
+> --hive-import\par
+19/10/11 22:06:14 INFO sqoop.Sqoop: Running Sqoop version: 1.4.5-cdh5.4.3\par
+19/10/11 22:06:14 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.\par
+19/10/11 22:06:14 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.\par
+19/10/11 22:06:14 INFO tool.CodeGenTool: Beginning code generation\par
+19/10/11 22:06:14 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `device` AS t LIMIT 1\par
+19/10/11 22:06:14 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `device` AS t LIMIT 1\par
+19/10/11 22:06:14 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/lib/hadoop-mapreduce\par
+Note: /tmp/sqoop-training/compile/2f3a0ffa7d9aa7f4f9faede0f5195434/device.java uses or overrides a deprecated API.\par
+Note: Recompile with -Xlint:deprecation for details.\par
+19/10/11 22:06:16 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/2f3a0ffa7d9aa7f4f9faede0f5195434/device.jar\par
+19/10/11 22:06:16 WARN manager.MySQLManager: It looks like you are importing from mysql.\par
+19/10/11 22:06:16 WARN manager.MySQLManager: This transfer can be faster! Use the --direct\par
+19/10/11 22:06:16 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.\par
+19/10/11 22:06:16 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)\par
+19/10/11 22:06:16 INFO mapreduce.ImportJobBase: Beginning import of device\par
+19/10/11 22:06:16 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address\par
+19/10/11 22:06:17 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar\par
+19/10/11 22:06:17 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps\par
+19/10/11 22:06:17 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032\par
+19/10/11 22:06:19 INFO db.DBInputFormat: Using read commited transaction isolation\par
+19/10/11 22:06:19 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`device_num`), MAX(`device_num`) FROM `device`\par
+19/10/11 22:06:19 INFO mapreduce.JobSubmitter: number of splits:4\par
+19/10/11 22:06:20 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1570855518922_0001\par
+19/10/11 22:06:20 INFO impl.YarnClientImpl: Submitted application application_1570855518922_0001\par
+19/10/11 22:06:20 INFO mapreduce.Job: The url to track the job: {{\field{\*\fldinst{HYPERLINK http://localhost:8088/proxy/application_1570855518922_0001/ }}{\fldrslt{http://localhost:8088/proxy/application_1570855518922_0001/\ul0\cf0}}}}\f0\fs22\par
+19/10/11 22:06:20 INFO mapreduce.Job: Running job: job_1570855518922_0001\par
+19/10/11 22:06:30 INFO mapreduce.Job: Job job_1570855518922_0001 running in uber mode : false\par
+19/10/11 22:06:30 INFO mapreduce.Job:  map 0% reduce 0%\par
+19/10/11 22:06:37 INFO mapreduce.Job:  map 25% reduce 0%\par
+19/10/11 22:06:42 INFO mapreduce.Job:  map 50% reduce 0%\par
+19/10/11 22:06:47 INFO mapreduce.Job:  map 75% reduce 0%\par
+19/10/11 22:06:52 INFO mapreduce.Job:  map 100% reduce 0%\par
+19/10/11 22:06:52 INFO mapreduce.Job: Job job_1570855518922_0001 completed successfully\par
+19/10/11 22:06:52 INFO mapreduce.Job: Counters: 30\par
+\tab File System Counters\par
+\tab\tab FILE: Number of bytes read=0\par
+\tab\tab FILE: Number of bytes written=543064\par
+\tab\tab FILE: Number of read operations=0\par
+\tab\tab FILE: Number of large read operations=0\par
+\tab\tab FILE: Number of write operations=0\par
+\tab\tab HDFS: Number of bytes read=464\par
+\tab\tab HDFS: Number of bytes written=2183\par
+\tab\tab HDFS: Number of read operations=16\par
+\tab\tab HDFS: Number of large read operations=0\par
+\tab\tab HDFS: Number of write operations=8\par
+\tab Job Counters \par
+\tab\tab Launched map tasks=4\par
+\tab\tab Other local map tasks=4\par
+\tab\tab Total time spent by all maps in occupied slots (ms)=0\par
+\tab\tab Total time spent by all reduces in occupied slots (ms)=0\par
+\tab\tab Total time spent by all map tasks (ms)=14191\par
+\tab\tab Total vcore-seconds taken by all map tasks=14191\par
+\tab\tab Total megabyte-seconds taken by all map tasks=3632896\par
+\tab Map-Reduce Framework\par
+\tab\tab Map input records=50\par
+\tab\tab Map output records=50\par
+\tab\tab Input split bytes=464\par
+\tab\tab Spilled Records=0\par
+\tab\tab Failed Shuffles=0\par
+\tab\tab Merged Map outputs=0\par
+\tab\tab GC time elapsed (ms)=267\par
+\tab\tab CPU time spent (ms)=2160\par
+\tab\tab Physical memory (bytes) snapshot=484118528\par
+\tab\tab Virtual memory (bytes) snapshot=3378053120\par
+\tab\tab Total committed heap usage (bytes)=191889408\par
+\tab File Input Format Counters \par
+\tab\tab Bytes Read=0\par
+\tab File Output Format Counters \par
+\tab\tab Bytes Written=2183\par
+19/10/11 22:06:52 INFO mapreduce.ImportJobBase: Transferred 2.1318 KB in 34.2476 seconds (63.7417 bytes/sec)\par
+19/10/11 22:06:52 INFO mapreduce.ImportJobBase: Retrieved 50 records.\par
+19/10/11 22:06:52 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `device` AS t LIMIT 1\par
+19/10/11 22:06:52 WARN hive.TableDefWriter: Column release_dt had to be cast to a less precise type in Hive\par
+19/10/11 22:06:52 INFO hive.HiveImport: Loading uploaded data into Hive\par
+\par
+Logging initialized using configuration in jar:file:/usr/lib/hive/lib/hive-common-1.1.0-cdh5.4.3.jar!/hive-log4j.properties\par
+mysql> use loudacre\par
+Reading table information for completion of table and column names\par
+You can turn off this feature to get a quicker startup with -A\par
+\par
+Database changed\par
+mysql> select * from webpage;\par
++--------------+---------------------------------+--------------------------------------------+\par
+| web_page_num | web_page_file_name              | associated_files                           |\par
++--------------+---------------------------------+--------------------------------------------+\par
+|            1 | sorrento_f00l_sales.html        | theme.css,code.js,sorrento_f00l.jpg        |\par
+|            2 | titanic_2100_sales.html         | theme.css,code.js,titanic_2100.jpg         |\par
+|            3 | meetoo_3.0_sales.html           | theme.css,code.js,meetoo_3.0.jpg           |\par
+|            4 | meetoo_3.1_sales.html           | theme.css,code.js,meetoo_3.1.jpg           |\par
+|            5 | ifruit_1_sales.html             | theme.css,code.js,ifruit_1.jpg             |\par
+|            6 | ifruit_3_sales.html             | theme.css,code.js,ifruit_3.jpg             |\par
+|            7 | ifruit_2_sales.html             | theme.css,code.js,ifruit_2.jpg             |\par
+|            8 | ifruit_5_sales.html             | theme.css,code.js,ifruit_5.jpg             |\par
+|            9 | titanic_1000_sales.html         | theme.css,code.js,titanic_1000.jpg         |\par
+|           10 | meetoo_1.0_sales.html           | theme.css,code.js,meetoo_1.0.jpg           |\par
+|           11 | sorrento_f21l_sales.html        | theme.css,code.js,sorrento_f21l.jpg        |\par
+|           12 | ifruit_4_sales.html             | theme.css,code.js,ifruit_4.jpg             |\par
+|           13 | sorrento_f23l_sales.html        | theme.css,code.js,sorrento_f23l.jpg        |\par
+|           14 | titanic_2200_sales.html         | theme.css,code.js,titanic_2200.jpg         |\par
+|           15 | ronin_novelty_note_1_sales.html | theme.css,code.js,ronin_novelty_note_1.jpg |\par
+|           16 | titanic_2500_sales.html         | theme.css,code.js,titanic_2500.jpg         |\par
+|           17 | ronin_novelty_note_3_sales.html | theme.css,code.js,ronin_novelty_note_3.jpg |\par
+|           18 | ronin_novelty_note_2_sales.html | theme.css,code.js,ronin_novelty_note_2.jpg |\par
+|           19 | ronin_novelty_note_4_sales.html | theme.css,code.js,ronin_novelty_note_4.jpg |\par
+|           20 | ifruit_3a_sales.html            | theme.css,code.js,ifruit_3a.jpg            |\par
+|           21 | titanic_2300_sales.html         | theme.css,code.js,titanic_2300.jpg         |\par
+|           22 | sorrento_f24l_sales.html        | theme.css,code.js,sorrento_f24l.jpg        |\par
+|           23 | sorrento_f20l_sales.html        | theme.css,code.js,sorrento_f20l.jpg        |\par
+|           24 | sorrento_f32l_sales.html        | theme.css,code.js,sorrento_f32l.jpg        |\par
+|           25 | sorrento_f22l_sales.html        | theme.css,code.js,sorrento_f22l.jpg        |\par
+|           26 | sorrento_f30l_sales.html        | theme.css,code.js,sorrento_f30l.jpg        |\par
+|           27 | sorrento_f10l_sales.html        | theme.css,code.js,sorrento_f10l.jpg        |\par
+|           28 | titanic_4000_sales.html         | theme.css,code.js,titanic_4000.jpg         |\par
+|           29 | sorrento_f41l_sales.html        | theme.css,code.js,sorrento_f41l.jpg        |\par
+|           30 | titanic_deckchairs_sales.html   | theme.css,code.js,titanic_deckchairs.jpg   |\par
+|           31 | meetoo_4.1_sales.html           | theme.css,code.js,meetoo_4.1.jpg           |\par
+|           32 | meetoo_4.0_sales.html           | theme.css,code.js,meetoo_4.0.jpg           |\par
+|           33 | meetoo_2.0_sales.html           | theme.css,code.js,meetoo_2.0.jpg           |\par
+|           34 | titanic_2000_sales.html         | theme.css,code.js,titanic_2000.jpg         |\par
+|           35 | meetoo_5.0_sales.html           | theme.css,code.js,meetoo_5.0.jpg           |\par
+|           36 | meetoo_5.1_sales.html           | theme.css,code.js,meetoo_5.1.jpg           |\par
+|           37 | titanic_3000_sales.html         | theme.css,code.js,titanic_3000.jpg         |\par
+|           38 | titanic_1100_sales.html         | theme.css,code.js,titanic_1100.jpg         |\par
+|           39 | sorrento_f33l_sales.html        | theme.css,code.js,sorrento_f33l.jpg        |\par
+|           40 | ifruit_4a_sales.html            | theme.css,code.js,ifruit_4a.jpg            |\par
+|           41 | sorrento_f31l_sales.html        | theme.css,code.js,sorrento_f31l.jpg        |\par
+|           42 | sorrento_f40l_sales.html        | theme.css,code.js,sorrento_f40l.jpg        |\par
+|           43 | sorrento_f01l_sales.html        | theme.css,code.js,sorrento_f01l.jpg        |\par
+|           44 | sorrento_f11l_sales.html        | theme.css,code.js,sorrento_f11l.jpg        |\par
+|           45 | titanic_2400_sales.html         | theme.css,code.js,titanic_2400.jpg         |\par
+|           46 | ronin_s4_sales.html             | theme.css,code.js,ronin_s4.jpg             |\par
+|           47 | ronin_s1_sales.html             | theme.css,code.js,ronin_s1.jpg             |\par
+|           48 | ronin_s3_sales.html             | theme.css,code.js,ronin_s3.jpg             |\par
+|           49 | ronin_s2_sales.html             | theme.css,code.js,ronin_s2.jpg             |\par
+|           50 | ifruit_5a_sales.html            | theme.css,code.js,ifruit_5a.jpg            |\par
+|           51 | contactus.html                  | theme.css,code.js                          |\par
+|           52 | coveragemap.html                | theme.css,code.js,map.jpg                  |\par
+|           53 | discounts.html                  | theme.css,code.js,promo.jpg                |\par
++--------------+---------------------------------+--------------------------------------------+\par
+53 rows in set (0.00 sec)\par
+#one variation\par
+mysql> select * from webpage WHERE web_page_file_name LIKE "ifruit%";\par
++--------------+----------------------+---------------------------------+\par
+| web_page_num | web_page_file_name   | associated_files                |\par
++--------------+----------------------+---------------------------------+\par
+|            5 | ifruit_1_sales.html  | theme.css,code.js,ifruit_1.jpg  |\par
+|            6 | ifruit_3_sales.html  | theme.css,code.js,ifruit_3.jpg  |\par
+|            7 | ifruit_2_sales.html  | theme.css,code.js,ifruit_2.jpg  |\par
+|            8 | ifruit_5_sales.html  | theme.css,code.js,ifruit_5.jpg  |\par
+|           12 | ifruit_4_sales.html  | theme.css,code.js,ifruit_4.jpg  |\par
+|           20 | ifruit_3a_sales.html | theme.css,code.js,ifruit_3a.jpg |\par
+|           40 | ifruit_4a_sales.html | theme.css,code.js,ifruit_4a.jpg |\par
+|           50 | ifruit_5a_sales.html | theme.css,code.js,ifruit_5a.jpg |\par
++--------------+----------------------+---------------------------------+\par
+8 rows in set (0.00 sec)\par
+#second:\par
+mysql> select * from webpage WHERE web_page_file_name LIKE "ronin%";\par
++--------------+---------------------------------+--------------------------------------------+\par
+| web_page_num | web_page_file_name              | associated_files                           |\par
++--------------+---------------------------------+--------------------------------------------+\par
+|           15 | ronin_novelty_note_1_sales.html | theme.css,code.js,ronin_novelty_note_1.jpg |\par
+|           17 | ronin_novelty_note_3_sales.html | theme.css,code.js,ronin_novelty_note_3.jpg |\par
+|           18 | ronin_novelty_note_2_sales.html | theme.css,code.js,ronin_novelty_note_2.jpg |\par
+|           19 | ronin_novelty_note_4_sales.html | theme.css,code.js,ronin_novelty_note_4.jpg |\par
+|           46 | ronin_s4_sales.html             | theme.css,code.js,ronin_s4.jpg             |\par
+|           47 | ronin_s1_sales.html             | theme.css,code.js,ronin_s1.jpg             |\par
+|           48 | ronin_s3_sales.html             | theme.css,code.js,ronin_s3.jpg             |\par
+|           49 | ronin_s2_sales.html             | theme.css,code.js,ronin_s2.jpg             |\par
++--------------+---------------------------------+--------------------------------------------+\par
+8 rows in set (0.00 sec)\par
+mysql>\par
+\par
+}
+ 
